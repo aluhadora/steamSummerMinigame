@@ -394,28 +394,6 @@
 
 		enhanceTooltips();
 		waitForWelcomePanelLoad();
-
-		// Determine number of badge points
-		var badgePoints = w.g_Minigame.CurrentScene().m_rgPlayerTechTree.badge_points;
-
-		// Determine how many other things to buy
-		var buy_count = (w.g_steamID % 10) + 1;
-
-		// Buy some
-		w.g_Minigame.CurrentScene().TrySpendBadgePoints( w.$J("<a data-type='25' data-cost='200'></a>"), buy_count );
-		badgePoints -= buy_count*200;
-
-		// How many WH/LN do we buy too?
-		var purchaseCount = Math.floor(badgePoints / 200);
-
-		// Buy mostly WH
-		w.g_Minigame.CurrentScene().TrySpendBadgePoints( w.$J("<a data-type='26' data-cost='100'></a>"), purchaseCount );
-
-		// Buy a few LN
-		w.g_Minigame.CurrentScene().TrySpendBadgePoints( w.$J("<a data-type='27' data-cost='100'></a>"), purchaseCount );
-
-		//Rest is Pumped Up
-		w.g_Minigame.CurrentScene().TrySpendBadgePoints(w.$J("<a data-type='19' data-cost='1'></a>"), badgePoints % 100 );
 	}
 
 	function updateLaneData() {
