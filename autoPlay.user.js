@@ -497,19 +497,19 @@
 				}
 				useCooldownIfRelevant();
 				useGoodLuckCharmIfRelevant();
-				//useMedicsIfRelevant();
+				useMedicsIfRelevant();
 				useMoraleBoosterIfRelevant();
-				//useMetalDetectorIfRelevant();
+				useMetalDetectorIfRelevant();
 				useClusterBombIfRelevant();
 				useNapalmIfRelevant();
 				useTacticalNukeIfRelevant();
 				useCrippleMonsterIfRelevant();
 				useCrippleSpawnerIfRelevant();
 				if ((level < control.speedThreshold || level % control.rainingRounds === 0) && level > control.useGoldThreshold) {
-					//useGoldRainIfRelevant();
+					useGoldRainIfRelevant();
 				}
 				useCrippleMonsterIfRelevant(level);
-				//useMaxElementalDmgIfRelevant();
+				useMaxElementalDmgIfRelevant();
 			}
 			else {
 				if (level % control.rainingRounds === 0) {
@@ -518,10 +518,10 @@
 					goToLaneWithBestTarget();
 				}
 				useCooldownIfRelevant();
-				//useMedicsIfRelevant();
+				useMedicsIfRelevant();
 				useMoraleBoosterIfRelevant();
-				//useMetalDetectorIfRelevant();
-				//useMaxElementalDmgIfRelevant();
+				useMetalDetectorIfRelevant();
+				useMaxElementalDmgIfRelevant();
 				if (level % 100 < 90){
 					useClusterBombIfRelevant();
 					useNapalmIfRelevant();
